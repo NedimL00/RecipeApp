@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { FaCheck, FaThumbsUp, FaMinus } from 'react-icons/fa';
-
+import { Link } from 'react-router-dom'
 
 function RecipeItem({recipe}) {
-
 
 
   function checkIfCheap(item) {
@@ -28,8 +27,8 @@ function RecipeItem({recipe}) {
   return (
     <div className="box" /* style={{backgroundImage: `url(${recipe.image})`}} */>
       
-      <a className='image-link' href={recipe.sourceUrl} target="_blank"><img className='img-recipe' src={recipe.image} alt="Image not found" /></a>
-      <a href={recipe.sourceUrl} target="_blank" title={recipe.title}><h2>{recipe.title}</h2></a>
+      <Link to={`/tutorial/${recipe.id}`} className='image-link' ><img className='img-recipe' src={recipe.image} alt="Image not found" /></Link>
+      <Link to={`/tutorial/${recipe.id}`} title={recipe.title}><h2>{recipe.title}</h2></Link>
       <hr />
       <p>
         <span><FaThumbsUp style={{color:"#0084FF", verticalAlign:'middle'}}/> : {recipe.aggregateLikes}</span>

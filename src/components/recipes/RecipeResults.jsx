@@ -37,6 +37,8 @@ if(!loading && random && Object.keys(recipes).length !== 0 ) { //return for RAND
       </div>
     </section>
     )
+  } else {
+    return <Spinner />
   }
 }
 

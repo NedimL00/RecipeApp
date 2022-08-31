@@ -12,8 +12,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   color: #333;
-
-
+  letter-spacing: 0.09em;
 }
 main{
   min-height: 100vh;
@@ -36,6 +35,7 @@ a {
   background: #FAC58F;
   color: white;
   height: 60px;
+  z-index:999;
 }
 .navbar .logo {
   font-size: x-large;
@@ -43,6 +43,7 @@ a {
 }
 
 .navbar ul {
+  position: s;
   display: flex;
   height: 100%;
   align-items: center;
@@ -251,7 +252,6 @@ a {
   font-size: xx-large;
 }
 
-
 .about-page-btn {
   display: flex;
   justify-content: space-around;
@@ -264,15 +264,55 @@ a {
   scale: 0.9;
 }
 
-@media (max-width: 1030px) {
-  .boxes .container {
-    justify-content: space-around;
-  }
+.tutorialContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
-@media (max-width: 400px) {
+.recipeTutorialHeader {
+  margin: 20px auto;
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: 2px solid #333;
+}
+
+.recipeTutorialImg {
+  margin-right: 60px;
+}
+
+.recipeContainer {
+  margin: 10px auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+}
+
+.ingredientsList{
+ padding-right: 20px;
+ border-right: 1px solid #333;
+}
+
+.ingredientsList li {
+  padding: 2px;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+.stepsList {
+  width: 500px;
+  padding-left: 20px;
+}
+
+@media (max-width: 1210px) {
   .boxes .container {
     flex-direction: column;
+    justify-content: space-around;
     align-items: center;
   }
+
 }
+
 

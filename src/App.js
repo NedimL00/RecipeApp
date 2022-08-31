@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Footer from './components/layout/Footer';
 import Navbar from './components/layout/Navbar';
 import Home from './pages/Home';
@@ -7,6 +7,7 @@ import Contact from './pages/Contact';
 import NotFound from './pages/NotFound';
 import { RecipeProvider } from './context/recipe/RecipeContext';
 import { AlertProvider } from './context/alert/AlertContext';
+import RecipeTutorial from './components/recipes/RecipeTutorial';
 
 
 function App() {
@@ -16,21 +17,21 @@ function App() {
   return (
     <RecipeProvider>
       <AlertProvider>
-        <Router>
+        <BrowserRouter>
           <div>
             <Navbar />
               <main>
                 <Routes>
                   <Route path='/' element={<Home/>} />
-                  <Route path='/about' element={<About/>} />
-                  <Route path='/contact' element={<Contact/>} />
-                  {/* <Route path='/recipe' element={<Recipe/>} /> */}
-                  <Route path='/*' element={<NotFound />} />
+                  <Route path='tutorial/:recipeID' element={<RecipeTutorial/>} />
+                  <Route path='about' element={<About/>} />
+                  <Route path='contact' element={<Contact/>} />
+                  <Route path='*' element={<NotFound />} />
                 </Routes>
               </main>
             <Footer />
           </div>
-        </Router>
+        </BrowserRouter>
       </AlertProvider>
     </RecipeProvider>
     

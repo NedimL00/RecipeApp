@@ -20,7 +20,7 @@ function RecipeSearch() {
       setAlert('Please enter some value', 'error')
     }else {
       setText(inputText);
-      // setInputText('');
+      setInputText('');
     }
   }
 

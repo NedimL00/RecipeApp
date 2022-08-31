@@ -21,7 +21,18 @@ const recipeReducer = (state, action) => {
         recipe: [action.payload, ...state.recipe],
         random: false,
       }
+    case 'GET_RECIPE_TUTORIAL':
+      return{
+        ...state,
+        recipeTutorial: action.payload.data,
+        loading:false
+      }
     case 'SET_LOADING':
+      return {
+        ...state,
+        loading:true,
+      }
+    case 'SET_TUTORIAL_LOADING':
       return {
         ...state,
         loading:true,
