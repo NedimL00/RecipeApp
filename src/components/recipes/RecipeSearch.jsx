@@ -29,10 +29,13 @@ function RecipeSearch() {
 
   return (
     <header className='header'>
-      <div className='container'>
-        <form onSubmit={handleSubmit} className='recipe-form'>
-          <input type='text' value={inputText} onChange={handleChange} className='recipe-input'/>
-          <button type='Submit' className='btn btn-search btn-recipe'><FaSearch className='search-icon'/></button>
+      <div className='container searchForm'>
+        <form onSubmit={handleSubmit} className='recipeForm'>
+          <div>
+            <input type='text' value={inputText} onChange={handleChange} className='recipe-input'/>
+            <button type='Submit' className='btn btn-search btn-recipe'><FaSearch className='search-icon'/></button>
+          </div>
+          
         </form>
       </div>
     </header>

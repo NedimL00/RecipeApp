@@ -8,18 +8,20 @@ import NotFound from './pages/NotFound';
 import { RecipeProvider } from './context/recipe/RecipeContext';
 import { AlertProvider } from './context/alert/AlertContext';
 import RecipeTutorial from './components/recipes/RecipeTutorial';
+import { LikeProvider } from './context/like/LikeContext';
+import LikedRecipes from './components/recipes/LikedRecipes';
 
 
 function App() {
 
 
-
   return (
     <RecipeProvider>
       <AlertProvider>
-        <BrowserRouter>
-          <div>
-            <Navbar />
+        <LikeProvider>
+          <BrowserRouter>
+            <LikedRecipes/>
+              <Navbar />
               <main>
                 <Routes>
                   <Route path='/' element={<Home/>} />
@@ -29,9 +31,9 @@ function App() {
                   <Route path='*' element={<NotFound />} />
                 </Routes>
               </main>
-            <Footer />
-          </div>
-        </BrowserRouter>
+              <Footer />
+          </BrowserRouter>
+        </LikeProvider>
       </AlertProvider>
     </RecipeProvider>
     

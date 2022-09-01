@@ -1,14 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaCheck, FaThumbsUp, FaMinus } from 'react-icons/fa';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import { AiOutlineHeart, AiFillHeart } from 'react-icons/ai';
 
 function RecipeItem({recipe}) {
 
+  const [liked, setLiked] = useState(false);
 
   function checkIfCheap(item) {
 
     if(item === true) {
-      return <FaCheck style={{color:'#698F4A', verticalAlign:'middle'}} />;
+      return <FaCheck className='icon' style={{color:'#698F4A', verticalAlign:'middle'}} />;
     } else {
       return <FaMinus style={{color:"#B42C14", verticalAlign:'middle'}}/>;
     }
@@ -35,6 +37,7 @@ function RecipeItem({recipe}) {
         <span>Cheap: {checkIfCheap(recipe.cheap)}</span>
         <span>Dairy free: {checkIfDairyFree(recipe.dairyFree)}</span>
         <span>Time to make: {recipe.readyInMinutes} minutes</span>
+        <span className='likeIconSpan'>Add to Liked: { liked ? <AiFillHeart onClick={() => setLiked(!liked)} style={{color:'#9E2A47', verticalAlign:'middle'}} /> : <AiOutlineHeart onClick={() => setLiked(!liked)} style={{verticalAlign:'middle'}} />}</span>
       </p>
     </div>
 ) 
