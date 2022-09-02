@@ -451,7 +451,7 @@ a {
   }
 
 }
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
 .likeCard {
 width: 100%;
 }
