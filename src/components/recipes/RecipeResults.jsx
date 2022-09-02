@@ -9,10 +9,9 @@ function RecipeResults() {
   const {random, recipes, recipe, loading} = useContext(RecipeContext);
 
 
-
 if(!loading && random && Object.keys(recipes).length !== 0 ) { //return for RANDOM RECIPES
+  
 
-  console.log(recipes)
 
 
   return (
@@ -26,7 +25,8 @@ if(!loading && random && Object.keys(recipes).length !== 0 ) { //return for RAND
   ) 
   } else if (!loading && random !== true && recipe.length !== 0) {
 
-/*     console.log(recipe) */
+
+
     return (
 
     <section className='boxes'>

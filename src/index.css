@@ -15,7 +15,14 @@ body {
   line-height: 1.5;
   color: #333;
   letter-spacing: 0.09em;
+  min-width: 400px;
 }
+
+.bodyOverflow {
+  overflow: hidden;
+  margin-left: -17px;
+}
+
 main{
   min-height: 100vh;
 }
@@ -342,13 +349,14 @@ a {
 }
 
 .showLikedItems {
-  position: absolute;
+  position: fixed;
   display: flex;
-  top: 60px;
+  top: 0px;
+  left: 0px;
   z-index: 999;
   width: 100%;
   height: 100vh;
-  background-color:rgba(51, 51, 51, 0.5);
+  background-color:rgba(51, 51, 51, 0.6);
 }
 
 .hideLikedItems {
@@ -360,7 +368,7 @@ a {
   flex-direction: column;
   position: relative;
   height: 500px;
-  width: 500px;
+  width: 30%;
   margin: auto;
   background-color: #FAC58F;
   border-radius: 10px;
@@ -385,13 +393,54 @@ a {
 }
 
 .likeCardItem {
+  display: flex;
+  justify-content: start;
+  align-items: center;
   height: 90px;
   width: 90%;
-
   background-color: #fff;
   margin: 0 auto 10px auto;
+  padding: 10px;
   border-radius: 10px;
 }
+
+
+.likeCardItem img {
+  width: 60px;
+  height: 60px;
+  margin-right: 50px;
+  border-radius: 100%;
+}
+
+.itemContent {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.itemContent p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  height: 30px;
+  width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-bottom: 1px solid #333 ;
+}
+
+.itemContentSpan {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.garbageIcon:hover {
+  cursor: pointer;
+}
+
 @media (max-width: 1210px) {
   
 
@@ -401,6 +450,11 @@ a {
     align-items: center;
   }
 
+}
+@media (max-width: 600px) {
+  .likeCard {
+    width: 100%;
+  }
 }
 
 

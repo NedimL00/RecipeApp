@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react';
 import AlertContext from '../../context/alert/AlertContext';
 import RecipeContext from '../../context/recipe/RecipeContext';
-import { FaSearch } from 'react-icons/fa'
+import { FaSearch } from 'react-icons/fa';
 
 function RecipeSearch() {
 

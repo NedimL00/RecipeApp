@@ -8,12 +8,18 @@ import LikeContext from '../../context/like/LikeContext';
 
 
 function Navbar() {
+  
+
 
   const { active, setActive } = useContext(LikeContext);
+
+
 
   const openIcon = <AiFillHeart className='navLikeIcon' onClick={() => setActive(!active)}/>
 
   const closedIcon = <AiOutlineHeart className='navLikeIcon' onClick={() => setActive(!active)}/>
+
+
 
 
 return (
