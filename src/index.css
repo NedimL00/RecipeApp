@@ -19,7 +19,7 @@ body {
 }
 
 .bodyOverflow {
-  overflow: auto;
+  overflow: visible;
 }
 
 main{
