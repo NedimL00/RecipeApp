@@ -34,7 +34,7 @@ if(!loaded && likedRecipes.length !== 0) {
           {likedRecipes.map((item) => {
             return (
             <div key={item.id} className='likeCardItem'>
-              <Link to={`tutorial/${item.id}`} target="_blank" ><img src={item.image} /></Link>
+              <Link to={`tutorial/${item.id}`} ><img src={item.image} /></Link>
               <div className='itemContent'>
                 <p>{item.title}</p>
                 <div className='itemContentSpan'>
