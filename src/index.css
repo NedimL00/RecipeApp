@@ -465,6 +465,9 @@ a {
   body{
     margin-top: 60px;
   }
+  .bodyOverflow {
+    margin: 0;
+  }
 
   .navbar {
     position: fixed;
