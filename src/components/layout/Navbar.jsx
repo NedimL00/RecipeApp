@@ -13,7 +13,7 @@ function Navbar() {
 
 
   const { active, setActive } = useContext(LikeContext);
-  const [clicked, setClicked] = useState (true);
+  const [clicked, setClicked] = useState (false);
 
   const openIcon = <AiFillHeart className='navLikeIcon' onClick={() => setActive(!active)}/>
 
