@@ -455,6 +455,10 @@ a {
 .likeCard {
 width: 100%;
 }
+.itemContent p {
+width:100px;
+}
+
 }
 
 
