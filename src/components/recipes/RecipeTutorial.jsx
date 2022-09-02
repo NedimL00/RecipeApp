@@ -29,9 +29,8 @@ if(!loading && recipeTutorial !== undefined){
           <img className='recipeTutorialImg' src={recipeTutorial.image} />
           <h2 className='recipeTutorialTitle' >{recipeTutorial.title}</h2>
         </div>
-        <h2 className='recipeContainerTitle'>To make this recipe you will need following: </h2>
+        <h4 className='recipeContainerTitle'>To make this recipe you will need following: </h4>
         <div className="recipeContainer">
-
           <RecipeIngredients ingredients={recipeTutorial.extendedIngredients} />
           <RecipeSteps  recipeSteps={recipeTutorial.analyzedInstructions} />
         </div>

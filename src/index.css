@@ -15,7 +15,12 @@ body {
   line-height: 1.5;
   color: #333;
   letter-spacing: 0.09em;
-  min-width: 400px;
+}
+
+.noSelect {
+  -webkit-user-select: none;  /* Chrome all / Safari all */
+  -moz-user-select: none;     /* Firefox all */
+  -ms-user-select: none;      /* IE 10+ */
 }
 
 .bodyOverflow {
@@ -35,6 +40,7 @@ a {
   color: inherit;
   transition: all 0.2s ease-in-out !important;
 }
+
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -48,12 +54,18 @@ a {
   z-index:999;
 }
 .navbar .logo {
-  font-size: x-large;
-  font-weight: bold;
+  height: 100%;
+  display: flex;
 }
 
-.navbar ul {
-  position: s;
+.navbar .logo a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.nav {
   display: flex;
   height: 100%;
   align-items: center;
@@ -63,6 +75,14 @@ a {
 .navbar ul li {
   align-items: center;
   margin: 0 10px;
+}
+
+.hamburgerIcons {
+  display: none;
+}
+
+.handleHamburger {
+  display: none !important;
 }
 
 .navbar a {
@@ -309,6 +329,7 @@ a {
   justify-content: space-between;
   align-items: center;
 }
+
 .recipeTutorialHeader {
   margin: 20px auto;
   padding: 20px 0;
@@ -328,6 +349,7 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: start;
+  font-size: 14px;
 }
 
 .ingredientsList{
@@ -336,12 +358,12 @@ a {
 }
 
 .ingredientsList li {
-  padding: 2px;
-  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+  padding: 20px;
+  border-top: 1px solid rgba(51, 51, 51, 0.5);
 }
 
 .stepsList {
-  width: 500px;
+  width: 50%;
   padding-left: 20px;
 }
 
@@ -425,9 +447,8 @@ a {
   margin-top: 10px;
   margin-bottom: 10px;
   height: 30px;
-  width: 300px;
+  width: 100%;
   overflow: hidden;
-  text-overflow: ellipsis;
   white-space: nowrap;
   border-bottom: 1px solid #333 ;
 }
@@ -452,11 +473,76 @@ a {
   }
 
 }
-@media (max-width: 1080px) {
-.likeCard {
-width: 100%;
-}
 
+
+@media (max-width: 1080px) {
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+  .nav {
+    background-color: #FAC58F;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    height: 100px;
+    width: 100%;
+    right: 0;
+    z-index: 100;
+    border-bottom: 3px solid #333;
+  }
+
+  .nav li {
+    width: 50%;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.6);
+  }
+
+  .hamburgerIcons {
+    color: #333;
+    display: block;
+    margin-right: 20px;
+  }
+
+  .hamburgerIcons:hover {
+    cursor: pointer;
+  }
+
+  .likeCard {
+    width: 100%;
+  }
+
+
+  .recipeTutorialHeader {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .recipeTutorialImg {
+    width: 300px;
+    margin: 10px auto;
+  }
+  .recipeContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .ingredientsList{
+    margin:  20px 0 30px 0;
+    border: none;
+  }
+  .stepsList {
+    width: 100%;
+    align-items: start;
+    padding: 0;
+  }
+  .stepsList li{
+    border-top: 1px solid #333;
+    padding-top: 10px;
+  }
 }
 
 
