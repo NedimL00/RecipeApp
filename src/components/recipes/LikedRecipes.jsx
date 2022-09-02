@@ -20,7 +20,9 @@ function LikedRecipes() {
     removeLiked(id);
   }
 
-
+  function closeModal() {
+    setActive(false);
+  }
 
 
 if(!loaded && likedRecipes.length !== 0) {
@@ -34,11 +36,11 @@ if(!loaded && likedRecipes.length !== 0) {
           {likedRecipes.map((item) => {
             return (
             <div key={item.id} className='likeCardItem'>
-              <Link to={`tutorial/${item.id}`} ><img src={item.image} /></Link>
+              <Link onClick={closeModal} to={`tutorial/${item.id}`} ><img src={item.image} /></Link>
               <div className='itemContent'>
                 <p>{item.title}</p>
                 <div className='itemContentSpan'>
-                  <span><Link to={`tutorial/${item.id}`} ><BsBoxArrowUpRight/></Link></span>
+                  <span><Link onClick={closeModal} to={`tutorial/${item.id}`} ><BsBoxArrowUpRight/></Link></span>
                   <span><FiTrash2 className='garbageIcon' onClick={() => {handleRemove(item.id)}}/></span>
                 </div>
               </div>

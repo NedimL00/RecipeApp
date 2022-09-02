@@ -8,7 +8,7 @@ import LikeContext from '../../context/like/LikeContext';
 function RecipeItem({recipe}) {
 
   const [liked, setLiked] = useState(false);
-  const { addLiked, removeLiked, likedRecipes, active} = useContext(LikeContext);
+  const { addLiked, removeLiked, setActive, active} = useContext(LikeContext);
   const likeBoxItems = {
     id: recipe.id,
     image: recipe.image,
@@ -60,6 +60,7 @@ function RecipeItem({recipe}) {
 
 
   }, [liked, active])
+
 
 
 
