@@ -457,8 +457,9 @@ width: 100%;
 }
 .itemContent p {
 width:100px;
-}
+overflow: auto;
 
+}
 }
 
 
