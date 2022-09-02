@@ -38,7 +38,7 @@ if(!loaded && likedRecipes.length !== 0) {
               <div className='itemContent'>
                 <p>{item.title}</p>
                 <div className='itemContentSpan'>
-                  <span><Link to={`tutorial/${item.id}`} target="_blank" ><BsBoxArrowUpRight/></Link></span>
+                  <span><Link to={`tutorial/${item.id}`} ><BsBoxArrowUpRight/></Link></span>
                   <span><FiTrash2 className='garbageIcon' onClick={() => {handleRemove(item.id)}}/></span>
                 </div>
               </div>
