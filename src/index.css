@@ -81,9 +81,7 @@ a {
   display: none;
 }
 
-.handleHamburger {
-  display: none !important;
-}
+
 
 .navbar a {
   color: #fff;
@@ -449,7 +447,6 @@ a {
   height: 30px;
   width: 100%;
   overflow: hidden;
-  white-space: nowrap;
   border-bottom: 1px solid #333 ;
 }
 
@@ -501,7 +498,10 @@ a {
   .hamburgerIcons:hover {
     cursor: pointer;
   }
-  
+
+  .handleHamburger {
+    display: none !important;
+  }
 
   .boxes .container {
     flex-direction: column;
